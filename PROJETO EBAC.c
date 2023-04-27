@@ -131,48 +131,68 @@ int main () // inicio da função
   
   int opcao=0; 
   int x=1; //definindo variaveis
-  for(x=1; x=1;)
+  char senhadigitada[10]= "a";
+  char Login [5] = "b";
+  
+  printf("### CARTÓRIO EBAC ### \n\n");
+  
+  printf("Login de administrador\n\n");
+  
+  printf(" \n Digite seu login: \n\n");
+  scanf(" %s ",Login);
+  
+  printf(" \n Digite sua senha: \n\n");
+  scanf(" %s ",senhadigitada);
+  
+
+  
+  if(senhadigitada  == "admin" || Login == "Ebac" )
 {
-	  system("cls");
+  	for(x=1; x=1;)
+
+	system("cls");
 	
-  setlocale(LC_ALL, "Portuguese");
+   setlocale(LC_ALL, "Portuguese");
   
   //inicio da tela do menu 
-  printf("\n\n >>> Cartório da EBAC <<< \n\n\n");
-  printf("Escolha a opção desejada do menu: \n\n");
-  printf("\t1 - Registrar nomes.  \n\n");
-  printf("\t2 -Consultar nomes.    \n\n");
-  printf("\t3 - deletar nomes.     \n\n"); 
-  printf("\t4 - Sair. \n\n");
-  printf("Opção:   ");
+   printf("\n\n >>> Cartório da EBAC <<< \n\n\n");
+   printf("Escolha a opção desejada do menu: \n\n");
+   printf("\t1 - Registrar nomes.  \n\n");
+   printf("\t2 -Consultar nomes.    \n\n");
+   printf("\t3 - deletar nomes.     \n\n"); 
+   printf("\t4 - Sair. \n\n");
+   printf("Opção:   ");
   
-  scanf("%d", &opcao);//armazenamento do usuario
+   scanf("%d", &opcao);//armazenamento do usuario
          system("cls"); //fim do menu
   
- switch(opcao) // inicio do menu 
+   switch(opcao) // inicio do menu 
 {
-  case 1:
-  registro(); //chamada da função registro 
-  break;
+   case 1:
+   registro(); //chamada da função registro 
+   break;
   
-  case 2:
-  consulta(); //chamada da função consultar
-  break;
+   case 2:
+   consulta(); //chamada da função consultar
+   break;
   
-  case 3:
-  deletar(); //chamada da função deletar
-  break;
+   case 3:
+   deletar(); //chamada da função deletar
+   break;
   
- case 4: //sair do sistema 
+   case 4: //sair do sistema 
    printf(" Obrigado por usar o Sistema!  \n");
    return 0;
    break;
    
-  default: // caso o dado não seja valido
-  printf("Essa opção é invalida. \n");
-  system("pause");
-  break; 	 // fim do menu
-  }
+   default: // caso o dado não seja valido
+   printf("Essa opção é invalida. \n");
+   system("pause");
+   break; 	 // fim do menu
+    }
+  
 }
 
+else
+  printf("Login ou senha incorreto!");
 }
