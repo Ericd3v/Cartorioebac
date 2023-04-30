@@ -129,28 +129,27 @@ int deletar() //inicio função de deletar
 int main () // inicio da função
 {
   
-  int opcao=0; 
-  int x=1; //definindo variaveis
+  int opcao=0; //definindo variaveis
+  int x=1; 
   char senhadigitada[10]= "a";
-  char Login [5] = "b";
+  int comparacao; 
   
   printf("### CARTÓRIO EBAC ### \n\n");
   
-  printf("Login de administrador\n\n");
+  printf("Login de administrador\n\n Digite sua senha:");
+
+  scanf("%s",senhadigitada);
   
-  printf(" \n Digite seu login: \n\n");
-  scanf(" %s ",Login);
-  
-  printf(" \n Digite sua senha: \n\n");
-  scanf(" %s ",senhadigitada);
-  
+  comparacao = strcmp(senhadigitada,"admin");
 
   
-  if(senhadigitada  == "admin" || Login == "Ebac" )
+  if(comparacao == 0)
 {
+  system("cls");
+	
   	for(x=1; x=1;)
+{
 
-	system("cls");
 	
    setlocale(LC_ALL, "Portuguese");
   
@@ -184,15 +183,15 @@ int main () // inicio da função
    printf(" Obrigado por usar o Sistema!  \n");
    return 0;
    break;
-   
+
    default: // caso o dado não seja valido
    printf("Essa opção é invalida. \n");
    system("pause");
    break; 	 // fim do menu
-    }
-  
+}
+}
 }
 
 else
-  printf("Login ou senha incorreto!");
+  printf("Senha incorreta!");
 }
